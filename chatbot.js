@@ -1372,6 +1372,14 @@
         var widgetId = null;
         
         for (var i = 0; i < scripts.length; i++) {
+          // First, check for data-widget-id attribute
+          var dataWidgetId = scripts[i].getAttribute('data-widget-id');
+          if (dataWidgetId) {
+            widgetId = dataWidgetId;
+            break;
+          }
+          
+          // Fallback: check URL pattern (for backward compatibility)
           var src = scripts[i].src || '';
           var match = src.match(/\/widget\/([^\/]+)\/widget-professional\.js/);
           if (match) {
