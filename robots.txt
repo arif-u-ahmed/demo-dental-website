@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://dental-template.framer.website/sitemap.xml
+Sitemap: https://imported-8798.hostmyhtml.com/_html4life/sitemap.xml
